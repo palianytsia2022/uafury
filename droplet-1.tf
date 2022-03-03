@@ -27,7 +27,7 @@ resource "digitalocean_droplet" "droplet-1" {
       "echo \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable\" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null",
       "sudo apt update",
       "sudo apt-get -y install docker-ce docker-ce-cli containerd.io",
-      "docker run -ti --rm alpine/bombardier -c 300 -H \"user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109\" -d 5000s -l --rate 1000 217.12.103.135:6500 --http2"
+      "docker run -ti --rm alpine/bombardier -c 300 -H \"user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109\" -d 5000s -l --rate 1000 host:port --http2"
     ]
   }
 }

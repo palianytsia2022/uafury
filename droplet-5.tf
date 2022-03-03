@@ -1,7 +1,7 @@
-resource "digitalocean_droplet" "droplet-2" {
+resource "digitalocean_droplet" "droplet-5" {
     image = "ubuntu-20-04-x64"
-    name = "droplet-2"
-    region = "lon1"
+    name = "droplet-5"
+    region = "ams3"
     size = "s-1vcpu-1gb"
     private_networking = true
     ssh_keys = [
