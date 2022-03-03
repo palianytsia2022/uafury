@@ -12,12 +12,17 @@
 5. У кожному файлі droplet-*.tf редагуємо команду у рядку 30 - підставляємо актуальну ціль, параметри
 Пізніше зроблю аргументом.
 6. У терміналі, у директорії куди ви склонували репозиторій:
-terraform plan -var "do_token=DigitalOceanToken" -var "pvt_key=terraform" -var "ssh_src_ipv4=PublicIPv4"
-terraform apply -var "do_token=DigitalOceanToken" -var "pvt_key=terraform" -var "ssh_src_ipv4=PublicIPv4"
+
+`terraform plan -var "do_token=DigitalOceanToken" -var "pvt_key=terraform" -var "ssh_src_ipv4=PublicIPv4"`
+
+`terraform apply -var "do_token=DigitalOceanToken" -var "pvt_key=terraform" -var "ssh_src_ipv4=PublicIPv4"`
+
 Атака почалась.
 
 По закінченню вилучаємо створену раніше інфраструктуру: 
-terraform destroy -var "do_token=DigitalOceanToken" -var "pvt_key=terraform" -var "ssh_src_ipv4=PublicIPv4"
+
+`terraform destroy -var "do_token=DigitalOceanToken" -var "pvt_key=terraform" -var "ssh_src_ipv4=PublicIPv4"`
+
 За необхідності - змінюємо ціль і починаємо спочатку.
 
 
